@@ -16,13 +16,23 @@ public class Java_Timer_CPRach {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        //System.out.println("Here");
+        
+        //runTimeBased();
+        runFrameBased();
+    }
+    
+    public static void runFrameBased() {
+        MyFrameBasedRunnable mfbr = new MyFrameBasedRunnable();
+        mfbr.setRunning(true);
+        MyThread myt = new MyThread(mfbr);
+        myt.start();
+    }
+    
+    public static void runTimeBased() {
         MyTimeBasedRunnable myr = new MyTimeBasedRunnable();
         myr.setRunning(true);
         MyThread myt = new MyThread(myr);
         myt.start();
-        
     }
     
 }

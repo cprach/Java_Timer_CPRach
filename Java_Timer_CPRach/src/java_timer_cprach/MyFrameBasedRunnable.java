@@ -12,10 +12,9 @@ package java_timer_cprach;
  */
 public class MyFrameBasedRunnable implements Runnable {
     
-    long currentFrame = 0;
     long stopFrame = 0;
     boolean running = false;
-    int frameCount = 0;
+    long frameCount = 0;
 
     @Override
     public void run() {
@@ -24,7 +23,7 @@ public class MyFrameBasedRunnable implements Runnable {
             frameCount ++;
             if (frameCount >= stopFrame) {
                 System.out.println("FrameCount: " + frameCount);
-                stopFrame = frameCount + 1000;
+                stopFrame = frameCount + 10000;
             }
         }
         
