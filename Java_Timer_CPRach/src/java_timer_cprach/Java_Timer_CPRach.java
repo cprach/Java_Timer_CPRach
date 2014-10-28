@@ -18,7 +18,7 @@ public class Java_Timer_CPRach {
     public static void main(String[] args) {
         // TODO code application logic here
         //System.out.println("Here");
-        MyRunnable myr = new MyRunnable();
+        MyTimeBasedRunnable myr = new MyTimeBasedRunnable();
         myr.setRunning(true);
         MyThread myt = new MyThread(myr);
         myt.start();

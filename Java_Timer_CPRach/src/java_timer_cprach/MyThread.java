@@ -12,9 +12,9 @@ package java_timer_cprach;
  */
 public class MyThread extends Thread {
     
-    MyRunnable myr;
+    MyTimeBasedRunnable myr;
     
-    public MyThread(MyRunnable myr) {
+    public MyThread(MyTimeBasedRunnable myr) {
         super(myr);
         //this.myr = myr;
         
